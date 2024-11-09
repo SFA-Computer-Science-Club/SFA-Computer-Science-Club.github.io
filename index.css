@@ -33,6 +33,7 @@
 
 /* Make sure logo is centered in between */
 .nav-center {
+    position: fixed;
     top: 0%; 
-    left: 45%;
+    left: 45%; 
 }
