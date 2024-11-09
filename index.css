@@ -1,0 +1,39 @@
+
+/* Logo styling */
+.logo {
+    max-width: 150px;
+    height: 100px;
+}
+
+/* Navigation bar styling */
+.w3-bar {
+    display: flex;
+    height: 80px;
+    justify-content: space-between; /* Distribute left and right tabs */
+    align-items: center; /* Vertically center tabs */
+    position: relative; /* Necessary for absolute positioning of the logo */
+    padding: 0 30px; /* Add padding for better spacing */
+}
+
+/* Left and Right tabs container */
+.nav-right {
+    display: flex;
+    margin-right: 100px;
+    font-size: large;
+    gap: 50px;
+}
+
+/* Left and Right tabs container */
+.nav-left {
+    display: flex;
+    margin-left: 100px;
+    font-size: large;
+    gap: 50px;
+}
+
+/* Make sure logo is centered in between */
+.nav-center {
+    position: absolute;
+    top: 0%; /* Center the logo vertically in the navbar */
+    left: 45%; /* Center the logo horizontally in the navbar */
+}
