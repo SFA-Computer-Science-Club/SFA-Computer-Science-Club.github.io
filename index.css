@@ -2,6 +2,7 @@
 .logo {
     max-width: 150px;
     height: 100px;
+    position: fixed;
 }
 
 /* Navigation bar styling */
@@ -32,7 +33,6 @@
 
 /* Make sure logo is centered in between */
 .nav-center {
-    position: absolute;
-    top: 0%; /* Center the logo vertically in the navbar */
-    left: 45%; /* Center the logo horizontally in the navbar */
+    top: 0%; 
+    left: 45%;
 }
