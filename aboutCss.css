@@ -31,7 +31,6 @@
 /* Left tabs container */
 .nav-left {
     display: flex;
-    margin-left: 100px;
     font-size: large;
     gap: 50px;
     align-items: center;
