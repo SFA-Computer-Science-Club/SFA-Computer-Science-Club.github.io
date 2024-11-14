@@ -6,6 +6,11 @@
     top: 0px;
 }
 
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+}
+
 /* Navigation bar styling */
 .w3-bar {
     display: flex;
