@@ -60,7 +60,7 @@
             <button class = "button w3-button w3-purple" onclick="scrollToFooter()">
                 <strong>Contact Us</strong>
             </button>
-            <button class = "button w3-button w3-purple" onclick="scrollToFooter()">
+            <button class = "button w3-button w3-purple" onclick="openLearnMorePage()">
               <strong>Learn More</strong>
             </button>
           </div> 
@@ -194,6 +194,13 @@
       function scrollToFooter() {
         const footer = document.getElementById('footer');
         footer.scrollIntoView({ behavior: 'smooth' });
+      }
+    </script>
+
+    <!-- Script 4 (Button to About.html) -->
+    <script>
+      function openAboutPage() {
+        window.location.href = 'about.html';
       }
     </script>
   </body>
