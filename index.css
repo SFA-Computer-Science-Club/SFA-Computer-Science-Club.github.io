@@ -14,7 +14,7 @@
     align-items: center; /* Vertically center tabs */
 }
 
-/* Left and Right tabs container */
+/* Right tabs container */
 .nav-right {
     display: flex;
     margin-right: 100px;
@@ -23,7 +23,7 @@
     padding-left: 100px;
 }
 
-/* Left and Right tabs container */
+/* Left tabs container */
 .nav-left {
     display: flex;
     margin-left: 100px;
