@@ -50,3 +50,12 @@
     justify-content: center;
     font-size: medium;
 }
+
+footer {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    margin: 10px 0;
+}
