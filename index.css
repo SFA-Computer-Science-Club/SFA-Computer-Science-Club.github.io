@@ -63,3 +63,20 @@ footer {
     width: 100%;
     margin-top: 10px; /* Top margin added */
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Initially, elements are hidden */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Optional, adds a slight upward movement */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+  
+/* When the element becomes visible, we fade it in */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Element moves to its normal position */
+}

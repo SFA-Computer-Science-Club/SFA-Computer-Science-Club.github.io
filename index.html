@@ -48,60 +48,6 @@
             <!-- Description placeholder -->
             <div id="description" class="w3-padding w3-light-grey w3-center">Description will appear here</div>
           </div>
-
-          <script>
-            var slideIndex = 1;
-            var timer;
-
-            // Descriptions for each image.
-            var descriptions = [
-              "Description for Image 1",
-              "Description for Image 2",
-              "Description for Image 3",
-              "Description for Image 4"
-            ];
-
-            showDivs(slideIndex);  // Show the first slide.
-
-            // Change slide when user clicks navigation.
-            function plusDivs(n) {
-              resetTimer(); // Resets the timer when the user clicks to navigate through images.
-              showDivs(slideIndex += n); // Moves to the next or previous slide.
-            }
-
-            // Show the current slide and update the description.
-            function showDivs(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var desc = document.getElementById("description");
-
-              if (n > slides.length) { slideIndex = 1 } // Loop to the first slide.
-              if (n < 1) { slideIndex = slides.length } // Loop to the last slide.
-
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  // Hide all slides.
-              }
-
-              slides[slideIndex - 1].style.display = "block";  // Display the current slide.
-              desc.innerText = descriptions[slideIndex - 1];   // Update the description.
-            }
-
-            // Start a timer for automatic slide change
-            function startTimer() {
-              timer = setInterval(function() {
-                plusDivs(1);
-              }, 5000);  // Change slide every 5 seconds
-            }
-
-            // Reset timer when user manually changes slide
-            function resetTimer() {
-              clearInterval(timer);
-              startTimer();
-            }
-
-            // Start the timer
-            startTimer();
-          </script>
         </div>
 
         <div class="col-sm-4"></div>
@@ -118,16 +64,10 @@
             </button>
           </div> 
         </div>
-        <script>     
-          function scrollToFooter() {
-              const footer = document.getElementById('footer');
-              footer.scrollIntoView({ behavior: 'smooth' });
-          }
-        </script>
       </div>
     </div>
 
-    <div class="container mt-2">
+    <div class="container mt-2 fade-in">
       <div class="row">
         <div class="col-sm-4"></div>
 
@@ -139,7 +79,7 @@
       </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container mt-5 fade-in">
       <div class="row align-items-center">
         <div class="col-sm-4">
           <div class="d-flex align-items-center">
@@ -167,5 +107,82 @@
       <p style = "font-size: medium;">Email: stembuidling@jacks.sfasu.edu</p>
       <p style = "font-size: medium;">Phone: stemNumber</p>
     </footer>
+
+    <script>
+      window.addEventListener('scroll', function() {
+        var elements = document.querySelectorAll('.fade-in');
+        elements.forEach(function(element) {
+          if (element.getBoundingClientRect().top < window.innerHeight) {
+            element.classList.add('visible');
+          }
+        });
+      });
+    
+      window.addEventListener('load', function() {
+        var elements = document.querySelectorAll('.fade-in');
+        elements.forEach(function(element) {
+          element.classList.add('visible');
+        });
+      });
+    </script>
+    <script>
+      var slideIndex = 1;
+      var timer;
+
+      // Descriptions for each image.
+      var descriptions = [
+        "Description for Image 1",
+        "Description for Image 2",
+        "Description for Image 3",
+        "Description for Image 4"
+      ];
+
+      showDivs(slideIndex);  // Show the first slide.
+
+      // Change slide when user clicks navigation.
+      function plusDivs(n) {
+        resetTimer(); // Resets the timer when the user clicks to navigate through images.
+        showDivs(slideIndex += n); // Moves to the next or previous slide.
+      }
+
+      // Show the current slide and update the description.
+      function showDivs(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var desc = document.getElementById("description");
+
+        if (n > slides.length) { slideIndex = 1 } // Loop to the first slide.
+        if (n < 1) { slideIndex = slides.length } // Loop to the last slide.
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  // Hide all slides.
+        }
+
+        slides[slideIndex - 1].style.display = "block";  // Display the current slide.
+        desc.innerText = descriptions[slideIndex - 1];   // Update the description.
+      }
+
+      // Start a timer for automatic slide change
+      function startTimer() {
+        timer = setInterval(function() {
+          plusDivs(1);
+        }, 5000);  // Change slide every 5 seconds
+      }
+
+      // Reset timer when user manually changes slide
+      function resetTimer() {
+        clearInterval(timer);
+        startTimer();
+      }
+
+      // Start the timer
+      startTimer();
+    </script>
+    <script>     
+      function scrollToFooter() {
+        const footer = document.getElementById('footer');
+        footer.scrollIntoView({ behavior: 'smooth' });
+      }
+    </script>
   </body>
 </html>
