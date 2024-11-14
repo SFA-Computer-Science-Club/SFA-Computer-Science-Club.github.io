@@ -21,6 +21,7 @@
     font-size: large;
     gap: 50px;
     padding-left: 100px;
+    align-items: center;
 }
 
 /* Left tabs container */
@@ -29,6 +30,7 @@
     margin-left: 100px;
     font-size: large;
     gap: 50px;
+    align-items: center;
 }
 
 /* Make sure logo is centered in between */
