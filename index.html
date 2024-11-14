@@ -14,7 +14,7 @@
     <!-- Tabbed Navigation -->
     <div class="w3-bar w3-purple">
       <!-- Left Tabs -->
-      <div class="nav-left">
+      <div class="nav-left"> 
         <a href="index.html" class="w3-bar-item w3-button tablink">About</a>
         <a href="events.html" class="w3-bar-item w3-button tablink">Events</a>
       </div>
@@ -36,9 +36,72 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-sm-4">
-          <h3>Column 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          <div class="w3-content w3-display-container">
+            <img class="mySlides" src="temp2.jpg" style="width:100%">
+            <img class="mySlides" src="temp3.jpg" style="width:100%">
+            <img class="mySlides" src="temp2.jpg" style="width:100%">
+            <img class="mySlides" src="temp3.jpg" style="width:100%">
+          
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+
+            <!-- Description placeholder -->
+            <div id="description" class="w3-padding w3-light-grey w3-center">Description will appear here</div>
+          </div>
+
+          <script>
+            var slideIndex = 1;
+            var timer;
+
+            // Descriptions for each image.
+            var descriptions = [
+              "Description for Image 1",
+              "Description for Image 2",
+              "Description for Image 3",
+              "Description for Image 4"
+            ];
+
+            showDivs(slideIndex);  // Show the first slide.
+
+            // Change slide when user clicks navigation.
+            function plusDivs(n) {
+              resetTimer(); // Resets the timer when the user clicks to navigate through images.
+              showDivs(slideIndex += n); // Moves to the next or previous slide.
+            }
+
+            // Show the current slide and update the description.
+            function showDivs(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var desc = document.getElementById("description");
+
+              if (n > slides.length) { slideIndex = 1 } // Loop to the first slide.
+              if (n < 1) { slideIndex = slides.length } // Loop to the last slide.
+
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  // Hide all slides.
+              }
+
+              slides[slideIndex - 1].style.display = "block";  // Display the current slide.
+              desc.innerText = descriptions[slideIndex - 1];   // Update the description.
+            }
+
+            // Start a timer for automatic slide change
+            function startTimer() {
+              timer = setInterval(function() {
+              plusDivs(1);
+            }, 5000);  // Change slide every 5 seconds
+          }
+
+          // Reset timer when user manually changes slide
+          function resetTimer() {
+            clearInterval(timer);
+            startTimer();
+          }
+
+          // Start the timer
+          startTimer();
+          </script>
         </div>
 
         <div class="col-sm-4">
