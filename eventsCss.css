@@ -1,0 +1,87 @@
+/* Logo styling */
+.logo {
+    position: absolute;  /* Allows the logo to overlay the bar */
+    max-width: 150px;  /* Control the width of the logo */
+    height: 100px;  /* Independent height, unaffected by the navbar */
+    top: 0px;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+}
+
+/* Navigation bar styling */
+.w3-bar {
+    display: flex;
+    height: 80px;
+    justify-content: space-between; /* Distribute left and right tabs */
+    align-items: center; /* Vertically center tabs */
+}
+
+/* Right tabs container */
+.nav-right {
+    display: flex;
+    font-size: large;
+    gap: 50px;
+    padding-left: 100px;
+    align-items: center;
+}
+
+/* Left tabs container */
+.nav-left {
+    display: flex;
+    margin-left: 100px;
+    font-size: large;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Make sure logo is centered in between */
+.nav-center {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+}
+
+footer {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    margin: 10px 0;
+}
+
+.profile-card {
+    width: 100%;
+    margin-top: 10px; /* Top margin added */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Initially, elements are hidden */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Optional, adds a slight upward movement */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+  
+/* When the element becomes visible, we fade it in */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Element moves to its normal position */
+}
