@@ -89,32 +89,41 @@
             // Start a timer for automatic slide change
             function startTimer() {
               timer = setInterval(function() {
-              plusDivs(1);
-            }, 5000);  // Change slide every 5 seconds
-          }
+                plusDivs(1);
+              }, 5000);  // Change slide every 5 seconds
+            }
 
-          // Reset timer when user manually changes slide
-          function resetTimer() {
-            clearInterval(timer);
+            // Reset timer when user manually changes slide
+            function resetTimer() {
+              clearInterval(timer);
+              startTimer();
+            }
+
+            // Start the timer
             startTimer();
-          }
-
-          // Start the timer
-          startTimer();
           </script>
         </div>
 
-        <div class="col-sm-4">
-          <h3>Column 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
+        <div class="col-sm-4"></div>
 
         <div class="col-sm-4">
-          <h3>Column 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+          <h3 style = "text-align: center;"><strong>Column 3</strong></h3>
+          <p style = "text-align: center;">Mission Statement</p>
+          <div class = "button-container">
+            <button class = "button w3-button w3-teal" onclick="scrollToFooter()">
+                <strong>Contact Us</strong>
+            </button>
+            <button class = "button w3-button w3-teal" onclick="scrollToFooter()">
+              <strong>Learn More</strong>
+            </button>
+          </div> 
         </div>
+        <script>     
+          function scrollToFooter() {
+              const footer = document.getElementById('footer');
+              footer.scrollIntoView({ behavior: 'smooth' });
+          }
+        </script>
       </div>
     </div>
   </body>
