@@ -38,3 +38,15 @@
     display: flex;
     justify-content: space-between;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+}
