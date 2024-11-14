@@ -52,6 +52,7 @@
 
         <div class="col-sm-4"></div>
 
+        <!-- Mission Statement and Buttons -->
         <div class="col-sm-4">
           <h3 style = "text-align: center;"><strong>Column 3</strong></h3>
           <p style = "text-align: center;">Mission Statement</p>
@@ -67,18 +68,22 @@
       </div>
     </div>
 
+    <!-- Empty column for spacing -->
     <div class="container mt-2 fade-in">
       <div class="row">
         <div class="col-sm-4"></div>
 
+        <!-- Heading encouraging joining -->
         <div class="col-sm-4">
           <p style = "margin-top: 50px; text-align: center; font-size: 30px;"><strong>Join The Cs Department</strong></p>
         </div>
         
+        <!-- Empty column for spacing -->
         <div class="col-sm-4"></div>
       </div>
     </div>
 
+    <!-- Join Us Header -->
     <div class="container mt-5 fade-in">
       <div class="row align-items-center">
         <div class="col-sm-4">
@@ -91,9 +96,10 @@
           </div>
         </div>
 
-        <div class="col-sm-4">
-        </div>
+        <!-- Empty column for spacing -->
+        <div class="col-sm-4"></div>
         
+        <!-- Group image with a card design -->
         <div class="col-sm-4">
           <div class="profile-card w3-card-4">
             <img src="temp4.jpg" alt="Group Picture" style="width: 100%;"></img>
@@ -102,18 +108,20 @@
       </div>
     </div>
 
+    <!-- Footer of the page -->
     <footer id="footer">
       <h2 style = "font-size: medium;"><strong>Contact Information</strong><h2>
       <p style = "font-size: medium;">Email: stembuidling@jacks.sfasu.edu</p>
       <p style = "font-size: medium;">Phone: stemNumber</p>
     </footer>
 
+    <!-- Script 1 (fade-in and scroll event) -->
     <script>
-      window.addEventListener('scroll', function() {
-        var elements = document.querySelectorAll('.fade-in');
+      window.addEventListener('scroll', function() { // Listens for when the user scrolls the page.
+        var elements = document.querySelectorAll('.fade-in'); 
         elements.forEach(function(element) {
           if (element.getBoundingClientRect().top < window.innerHeight) {
-            element.classList.add('visible');
+            element.classList.add('visible'); // Adds "visible" class when element is in view.
           }
         });
       });
@@ -121,12 +129,14 @@
       window.addEventListener('load', function() {
         var elements = document.querySelectorAll('.fade-in');
         elements.forEach(function(element) {
-          element.classList.add('visible');
+          element.classList.add('visible'); // Ensures fade-in happens when the page loads.
         });
       });
     </script>
+
+    <!-- Script 2 (image slider functionality) -->
     <script>
-      var slideIndex = 1;
+      var slideIndex = 1; // Initial slide index
       var timer;
 
       // Descriptions for each image.
@@ -178,6 +188,8 @@
       // Start the timer
       startTimer();
     </script>
+
+    <!-- Script 3 (Smooth scroll to footer) -->
     <script>     
       function scrollToFooter() {
         const footer = document.getElementById('footer');
