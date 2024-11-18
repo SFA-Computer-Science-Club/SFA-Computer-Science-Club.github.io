@@ -22,8 +22,7 @@
 /* Right tabs container */
 .nav-right {
     display: flex;
-    font-size: large;
-    gap: 10px;
+    font-size: small;
     padding-left: 100px;
     align-items: center;
 }
@@ -31,8 +30,7 @@
 /* Left tabs container */
 .nav-left {
     display: flex;
-    font-size: large;
-    gap: 10px;
+    font-size: small;
     align-items: center;
 }
 
