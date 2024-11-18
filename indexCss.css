@@ -17,6 +17,7 @@
     height: 80px;
     justify-content: space-between; /* Distribute left and right tabs */
     align-items: center; /* Vertically center tabs */
+    white-space: nowrap;
 }
 
 /* Right tabs container */
