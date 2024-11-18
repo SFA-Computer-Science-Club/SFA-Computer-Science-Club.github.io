@@ -1,7 +1,7 @@
 /* Logo styling */
 .logo {
     position: absolute;  /* Allows the logo to overlay the bar */
-    max-width: 150px;  /* Control the width of the logo */
+    max-width: 80px;  /* Control the width of the logo */
     height: 100px;  /* Independent height, unaffected by the navbar */
     top: 0px;
 }
@@ -17,14 +17,13 @@
     height: 80px;
     justify-content: space-between; /* Distribute left and right tabs */
     align-items: center; /* Vertically center tabs */
-    flex-wrap: nowrap; 
 }
 
 /* Right tabs container */
 .nav-right {
     display: flex;
     font-size: small;
-    padding-left: 100px;
+    padding-left: 70px;
     align-items: center;
 }
 
