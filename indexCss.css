@@ -1,7 +1,7 @@
 /* Logo styling */
 .logo {
     position: absolute;  /* Allows the logo to overlay the bar */
-    max-width: 80px;  /* Control the width of the logo */
+    max-width: 150px;  /* Control the width of the logo */
     height: 100px;  /* Independent height, unaffected by the navbar */
     top: 0px;
 }
@@ -22,15 +22,15 @@
 /* Right tabs container */
 .nav-right {
     display: flex;
-    font-size: small;
-    padding-left: 70px;
+    font-size: large;
+    padding-left: 100px;
     align-items: center;
 }
 
 /* Left tabs container */
 .nav-left {
     display: flex;
-    font-size: small;
+    font-size: large;
     align-items: center;
 }
 
@@ -89,6 +89,6 @@ html {
     height: 1000px;
     object-fit: cover; /* Ensures video covers the screen */
     /* Add blur and dim effect */
-    filter: blur(5px) brightness(100%);
+    filter: blur(5px) brightness(105%);
     z-index: -1; /* Places video behind other content */
 }
