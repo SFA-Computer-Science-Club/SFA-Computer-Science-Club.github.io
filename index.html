@@ -17,7 +17,7 @@
     </video>
     
     <!-- Tabbed Navigation -->
-    <div class="w3-bar w3-purple">
+    <div class="w3-bar" style="background-color: #2e1157; color: white;">
       <!-- Left Tabs -->
       <div class="nav-left"> 
         <a href="about.html" class="w3-bar-item w3-button tablink">About</a>
@@ -26,8 +26,8 @@
 
       <!-- Logo in the middle -->
       <div class="nav-center">
-        <a href="https://sfacas.sfasu.edu/cas/login?service=https%3A%2F%2Fsfacas.sfasu.edu%2Fcas%2Fidp%2Fprofile%2FSAML2%2FCallback%3Fsrid%3D_6cbacdd4aca276d63511a86ec17f3f711d652d3af2%26entityId%3Dhttps%253A%252F%252Fmysfa.sfasu.edu%252F_saml%252Fmodule.php%252Fsaml%252Fsp%252Fmetadata.php%252Fsaml" class="text-center">
-          <img src="temp.jpg" alt="Logo" class="logo">
+        <a href="#" class="text-center">
+          <img src="sfalogo.png" alt="Logo" class="logo" style="background-color: #250d46; padding: 5px 5px 5px 5px;">
         </a>
       </div>
 
@@ -62,10 +62,10 @@
           <h3 style = "text-align: center;"><strong>Mission Statement</strong></h3>
           <p style = "text-align: center;">"Description"</p>
           <div class = "button-container">
-            <button class = "button w3-button w3-purple" onclick="scrollToFooter()">
+            <button class = "button w3-button" style="background-color: #2e1157; color: white;" onclick="scrollToFooter()">
                 <strong>Contact Us</strong>
             </button>
-            <button class = "button w3-button w3-purple" onclick="openAboutPage()">
+            <button class = "button w3-button" style="background-color: #2e1157; color: white;" onclick="openAboutPage()">
               <strong>Learn More</strong>
             </button>
           </div> 
@@ -114,11 +114,39 @@
     </div>
 
     <!-- Footer of the page -->
-    <footer id="footer">
-      <h2 style = "font-size: medium;"><strong>Contact Information</strong><h2>
-      <p style = "font-size: medium;">Email: stembuidling@jacks.sfasu.edu</p>
-      <p style = "font-size: medium;">Phone: stemNumber</p>
-    </footer>
+    <link rel="stylesheet" href="styleFooter.css">
+    <div id="footer">
+      <div class="footer">
+          <div class="col-left">
+              <div class="logo-link" id="socialsTitle">
+                  <p>Socials</p>
+              </div>
+              <div class="logo-link" id="instagram"> 
+                  <img style="height: 31px;" id="logoInstagram" src="logos/Instagram.svg" alt="Instagram Logo"> 
+                  <a href="https://www.instagram.com/compsciclubsfa">Instagram</a>
+              </div>
+              <div class="logo-link" id="discord"> 
+                  <img id="logoDiscord" style="height: 26px; padding: 0 10px 0 10px;" src="logos/discord.svg" alt="Instagram Logo"> 
+                  <a href="https://discord.gg/TWnrhzB6Zk">Discord</a>
+              </div>
+              <div class="logo-link" id="handle"> 
+                  <a  href="https://sfasu.presence.io/organization/computer-science-club">The Handle</a>
+              </div>
+              
+          </div>
+
+          <div class="col-mid">
+              <img src="logos/CSClogo.svg" alt="CSC Logo"/>
+              <p>Stephen F. Austin</p>
+              <p>Computer Science Club</p>
+          </div>
+          
+          <div class="col-right">
+              <p>Join Us!</p>
+              <img src="logos/qrcode.svg" alt="QR Code">
+          </div>
+      </div>
+    </div>
 
     <!-- Script 1 (fade-in and scroll event) -->
     <script>
